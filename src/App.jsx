@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import Navbar from './components/navbar'
 import Hero from './components/Hero';
 import AboutSkills from './components/AboutSkills';
+import Experience from './components/Experience';
 import Projects from './components/Projects'; 
 import Footer from './components/Footer';
 import './App.css'
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Hero /> 
       <AboutSkills />   
+      <Experience />
       <Projects /> 
       <Footer />    
     </div>

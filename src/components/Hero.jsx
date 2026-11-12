@@ -1,4 +1,6 @@
 import React from 'react';
+import BlogPreview from './BlogPreview';
+import VideoPreview from './videoPreview';
 import { FiArrowRight, FiMail } from 'react-icons/fi';
 import { SiSharp, SiPython, SiReact, SiAngular, SiNodedotjs, SiMongodb, SiDocker, SiGit, SiGithub } from 'react-icons/si';
 import { FaDatabase, FaBrain, FaCube, FaCloud } from 'react-icons/fa';  
@@ -67,44 +69,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ================= RIGHT SIDE: Pure CSS Graphic ================= */}
-        <div className="relative w-full lg:w-1/2 h-[500px] flex items-center justify-center mt-16 lg:mt-0">
+        {/* ================= RIGHT SIDE: Video Animation ================= */}
+        <div id="blog" className="relative w-full lg:w-1/2 h-[500px] flex items-center justify-center mt-16 lg:mt-0">
           
           {/* Background Glows & Rings */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[80px] pointer-events-none"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-blue-500/20 rounded-full pointer-events-none"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-blue-500/10 rounded-full pointer-events-none"></div>
-
-          {/* Center Code Graphic (Fixed position) */}
-          <div className="relative z-10 w-40 h-40 bg-[#0f172a] border border-blue-500/50 rounded-3xl flex items-center justify-center shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:scale-105 transition-transform duration-300">
-            <span className="text-6xl text-blue-500 font-mono font-bold tracking-tighter">&lt;/&gt;</span>
-          </div>
-
-          {/* Floating Icons - Absolutely positioned around the center */}
+          <VideoPreview />
           
-          {/* Top Left */}
-          <div className="absolute top-[15%] left-[10%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '3s' }}>
-            <SiPython className="text-yellow-400 text-3xl" />
-          </div>
-          
-          {/* Bottom Left */}
-          <div className="absolute bottom-[20%] left-[15%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '4s' }}>
-            <FaDatabase className="text-red-500 text-2xl" />
-          </div>
-
-          {/* Top Right */}
-          <div className="absolute top-[20%] right-[10%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '3.5s' }}>
-            <SiSharp className="text-purple-500 text-3xl" />
-          </div>
-
-          {/* Bottom Right */}
-          <div className="absolute bottom-[15%] right-[15%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '4.5s' }}>
-            <SiReact className="text-cyan-400 text-3xl" />
-          </div>
-
-          {/* Tiny Decorative Dots */}
-          <div className="absolute top-[30%] right-[30%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa]"></div>
-          <div className="absolute bottom-[30%] left-[30%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa]"></div>
         </div>
       </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 import { FiDownload } from 'react-icons/fi'; // Import the download icon
 export default function Navbar(){
     return(
-        <nav className="absolute top-0 w-full flex items-center justify-between px-6 py-6 md:px-12 z-50 bg-transparent">   
+        <nav className="fixed top-0 w-full flex items-center justify-between px-6 py-4 md:px-12 z-[100] bg-[#0B1120]/80 backdrop-blur-md border-b border-slate-800/50">   
             {/* 1. Logo Area */}
             <div className="flex items-center gap-3 cursor-pointer">
                 {/* Styled 'AL' logo placeholder (matching your screenshot) */}                
@@ -30,7 +30,7 @@ export default function Navbar(){
                 <a href="#projects" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Projects
                 </a>
-                <a href="#projects" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <a href="#experience" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Experience
                 </a>
                 <a href="#blog" className="text-gray-400 hover:text-white transition-colors duration-200">
@@ -43,8 +43,9 @@ export default function Navbar(){
             {/* 3. RIGHT: Download Resume Button */}
             <div>
                 <a 
-                href="#resume" 
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-blue-500 text-white text-sm font-medium hover:bg-blue-500/10 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300"
+                href="/resume.pdf"        /* <-- Point this to your file in the public folder */
+          download="Victor_Rodriguez_Resume.pdf" /* <-- The name of the file when they download it */
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-blue-500 text-white text-sm font-medium hover:bg-blue-500/10 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300 cursor-pointer"
                 >
                 <FiDownload className="text-lg" />
                 <span>Download Resume</span>
