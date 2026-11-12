@@ -1,0 +1,16 @@
+@import "tailwindcss";
+theme {
+  --color-darBg: #0B1120;
+  --color-neonBlue: #3B82F6;
+}
+/* Apply the background and text color to the whole body */
+html, body, #root {
+  background-color: #0B1120 !important; 
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0B1120; /* Dark navy background */
+  color: white;
+  overflow-x: hidden;
+}

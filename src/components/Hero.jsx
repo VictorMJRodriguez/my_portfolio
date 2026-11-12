@@ -1,0 +1,128 @@
+import React from 'react';
+import { FiArrowRight, FiMail } from 'react-icons/fi';
+import { SiSharp, SiPython, SiReact, SiAngular, SiNodedotjs, SiMongodb, SiDocker, SiGit, SiGithub } from 'react-icons/si';
+import { FaDatabase, FaBrain, FaCube, FaCloud } from 'react-icons/fa';  
+
+export default function Hero() {
+  // Tech stack data for the bottom ribbon
+  const techs = [
+    { name: 'C# / .NET', icon: <SiSharp className="text-purple-500" /> },
+    { name: 'Python', icon: <SiPython className="text-yellow-400" /> },
+    { name: 'React', icon: <SiReact className="text-cyan-400" /> },
+    { name: 'Angular', icon: <SiAngular className="text-red-600" /> },
+    { name: 'Node.js', icon: <SiNodedotjs className="text-green-500" /> },
+    { name: 'SQL Server', icon: <FaDatabase className="text-red-500" /> },
+    { name: 'MongoDB', icon: <SiMongodb className="text-green-600" /> },
+    { name: 'Docker', icon: <SiDocker className="text-blue-500" /> },
+    { name: 'Azure', icon: <FaCloud className="text-blue-400" /> }, // Using Cloud icon for Azure
+    { name: 'Git', icon: <SiGit className="text-orange-500" /> },
+    { name: 'GitHub', icon: <SiGithub className="text-white" /> },
+    { name: 'AI / LLMs', icon: <FaBrain className="text-pink-500" /> }, // New icon
+    { name: 'Blockchain', icon: <FaCube className="text-blue-500" /> },
+  ];
+
+  return (
+    <section className="relative w-full pt-32 pb-0 overflow-hidden bg-[#0B1120]">
+      
+      {/* Top glowing background effect */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600 rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+
+      <div className="w-full mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between relative z-10">
+        
+        {/* ================= LEFT SIDE: TEXT ================= */}
+        <div className="w-full lg:w-1/2 flex flex-col items-start gap-6 mb-16 lg:mb-0">
+          
+          <div className="flex items-center gap-2">
+            <h2 className="text-white text-xl font-semibold tracking-wide">
+              Hi, I'm Victor Rodriguez
+            </h2>
+            <span className="text-2xl animate-wave origin-bottom-right inline-block">👋</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-white leading-[1.1] tracking-tight">
+            Senior <span className="text-blue-500">Full-Stack</span><br />
+            Software Engineer
+          </h1>
+          
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-200 mt-2">
+            Building Scalable Solutions with Modern Technologies
+          </h3>
+          
+          <p className="text-gray-400 text-base md:text-lg max-w-lg leading-relaxed">
+            Experienced developer specializing in C#/.NET, Python, React.js, and cloud technologies. Passionate about creating innovative software solutions and turning ideas into reality.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-wrap items-center gap-4 mt-4">
+            <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+              <a href="#projects" className="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] cursor-pointer">
+              🚀 View My Projects <FiArrowRight />
+              </a>
+            </button>
+            <button className="flex items-center gap-2 border border-gray-500 hover:border-white text-white px-8 py-3.5 rounded-full font-semibold transition-all">
+              <a href="#contact" className="flex items-center justify-center gap-2 border border-gray-500 hover:border-white text-white px-8 py-3.5 rounded-full font-semibold transition-all cursor-pointer">
+              <FiMail /> Contact Me
+              </a>
+            </button>
+          </div>
+        </div>
+
+        {/* ================= RIGHT SIDE: Pure CSS Graphic ================= */}
+        <div className="relative w-full lg:w-1/2 h-[500px] flex items-center justify-center mt-16 lg:mt-0">
+          
+          {/* Background Glows & Rings */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[80px] pointer-events-none"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-blue-500/20 rounded-full pointer-events-none"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-blue-500/10 rounded-full pointer-events-none"></div>
+
+          {/* Center Code Graphic (Fixed position) */}
+          <div className="relative z-10 w-40 h-40 bg-[#0f172a] border border-blue-500/50 rounded-3xl flex items-center justify-center shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:scale-105 transition-transform duration-300">
+            <span className="text-6xl text-blue-500 font-mono font-bold tracking-tighter">&lt;/&gt;</span>
+          </div>
+
+          {/* Floating Icons - Absolutely positioned around the center */}
+          
+          {/* Top Left */}
+          <div className="absolute top-[15%] left-[10%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '3s' }}>
+            <SiPython className="text-yellow-400 text-3xl" />
+          </div>
+          
+          {/* Bottom Left */}
+          <div className="absolute bottom-[20%] left-[15%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '4s' }}>
+            <FaDatabase className="text-red-500 text-2xl" />
+          </div>
+
+          {/* Top Right */}
+          <div className="absolute top-[20%] right-[10%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '3.5s' }}>
+            <SiSharp className="text-purple-500 text-3xl" />
+          </div>
+
+          {/* Bottom Right */}
+          <div className="absolute bottom-[15%] right-[15%] z-20 w-16 h-16 bg-[#0f172a] border border-slate-700 rounded-2xl flex items-center justify-center shadow-lg animate-bounce" style={{ animationDuration: '4.5s' }}>
+            <SiReact className="text-cyan-400 text-3xl" />
+          </div>
+
+          {/* Tiny Decorative Dots */}
+          <div className="absolute top-[30%] right-[30%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa]"></div>
+          <div className="absolute bottom-[30%] left-[30%] w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa]"></div>
+        </div>
+      </div>
+
+      {/* ================= BOTTOM: TECH STACK RIBBON ================= */}
+      <div className="w-full border-y border-slate-800 bg-[#0f172a]/80 backdrop-blur-sm mt-16 py-6">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between flex-wrap gap-6">
+          {techs.map((tech, index) => (
+            <div key={index} className="flex flex-col items-center gap-2 group cursor-pointer">
+              <div className="text-3xl md:text-4xl group-hover:-translate-y-1 transition-transform duration-300 drop-shadow-md">
+                {tech.icon}
+              </div>
+              <span className="text-xs text-gray-400 font-medium group-hover:text-white transition-colors">
+                {tech.name}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
