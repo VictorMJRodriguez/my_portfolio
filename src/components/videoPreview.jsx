@@ -38,21 +38,11 @@ export default function VideoPreview() {
       title: "AutoCAD Plugin Demo2",
       file: "/video7.mp4",
       duration: "0:22",
-    },
-    {
-      title: "AutoCAD Plugin Demo3",
-      file: "/video8.mp4",
-      duration: "0:22",
-    },
-    {
-      title: "AutoCAD Plugin Demo4",
-      file: "/video9.mp4",
-      duration: "0:22",
-    }
+    },    
   ];
 
   return (
-    <div className="w-full max-w-md bg-[#0f172a]/80 border border-slate-700 rounded-2xl p-5 backdrop-blur-md shadow-[0_0_30px_rgba(37,99,235,0.15)] relative z-20 flex flex-col max-h-[500px]">
+    <div className="w-full bg-[#1e293b] rounded-xl border border-slate-700 rounded-2xl p-5 backdrop-blur-md shadow-[0_0_30px_rgba(37,99,235,0.15)] relative z-20 flex flex-col max-h-[500px]">
       
       {/* Header */}
       <div className="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">

@@ -5,24 +5,28 @@ export default function Experience() {
     {
       role: "Senior Full-Stack Software Engineer",
       company: "Anchorstacktech",
+      logo: "/logos/Anchorstacktech logo.png", // Add your logo path here
       date: "1/2024 - 6/2026",
       description: "Architected scalable applications with Python, React, and AWS Lambda, cutting average API response time from 1.8s to 650ms and improving platform stability. Modernized legacy services using Django, PostgreSQL, and AWS RDS, reducing production errors from 14% to 4% while supporting higher transaction volumes. ",
     },
     {
       role: "Software Engineer",
       company: "Exomindset",
+      logo: "/logos/exomindest.png", // Add your logo path here
       date: "2/2022 - 12/2023",
       description: "Built web applications with JavaScript, TypeScript, and React, reducing frontend defects from 18% to 6%. Automated deployments with Docker, GitHub Actions, and AWS ECS, cutting deployment time from 45 to 12 minutes.",
     },
     {
       role: "Software Engineer",
       company: "NIC",
+      logo: "/logos/nic.png", // Add your logo path here
       date: "8/2021 - 1/2022",
       description: "Delivered full-stack platforms with Python, JavaScript, and React, reducing average feature delivery time from 15 to 9 days through reusable architecture. Improved backend performance using Python, Django REST Framework, and PostgreSQL, reducing complex query latency from 2.4s to 800ms. ",
     },
     {
       role: "Web Developer, Internship",
       company: "OBT IT Services",
+      logo: "/logos/obt.png", // Add your logo path here
       date: "7/2018 - 10/2020",
       description: "Assisted in developing web features with JavaScript, React, and Jest, helping reduce reported frontend defects from 15% to 8% across assigned modules. Tested application components using Jest, React Testing Library, and JavaScript, increasing test coverage from 55% to 78% for maintained frontend features.",
     }
@@ -54,7 +58,18 @@ export default function Experience() {
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                 <div>
                   <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                  <p className="text-blue-400 font-medium">{exp.company}</p>
+                  
+                  {/* Company Name & Logo Flex Container */}
+                  <div className="flex items-center gap-2 mt-1">
+                    {exp.logo && (
+                      <img 
+                        src={exp.logo} 
+                        alt={`${exp.company} logo`} 
+                        className="w-5 h-5 object-contain rounded-sm" 
+                      />
+                    )}
+                    <p className="text-blue-400 font-medium">{exp.company}</p>
+                  </div>
                 </div>
                 
                 {/* Date Badge */}

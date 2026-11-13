@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogPreview from './BlogPreview';
 import VideoPreview from './videoPreview';
+import Achievements from './Achievements'; 
 import { FiArrowRight, FiMail } from 'react-icons/fi';
 import { SiSharp, SiPython, SiReact, SiAngular, SiNodedotjs, SiMongodb, SiDocker, SiGit, SiGithub } from 'react-icons/si';
 import { FaDatabase, FaBrain, FaCube, FaCloud } from 'react-icons/fa';  
@@ -32,12 +33,12 @@ export default function Hero() {
       <div className="w-full mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between relative z-10">
         
         {/* ================= LEFT SIDE: TEXT ================= */}
-        <div className="w-full lg:w-1/2 flex flex-col items-start gap-6 mb-16 lg:mb-0">
+        <div className="w-full lg:w-1/2 flex flex-col items-start z-10 lg:pl-8">
           
           <div className="flex items-center gap-2">
-            <h2 className="text-white text-xl font-semibold tracking-wide">
-              Hi, I'm Victor Rodriguez
-            </h2>
+            <span className="text-2xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 tracking-wide uppercase">
+              ⚡ Terrific Solutions
+            </span>
             <span className="text-2xl animate-wave origin-bottom-right inline-block">👋</span>
           </div>
           
@@ -68,34 +69,22 @@ export default function Hero() {
             </button>
           </div>
         </div>
-
         {/* ================= RIGHT SIDE: Video Animation ================= */}
-        <div id="blog" className="relative w-full lg:w-1/2 h-[500px] flex items-center justify-center mt-16 lg:mt-0">
-          
-          {/* Background Glows & Rings */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[80px] pointer-events-none"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-blue-500/20 rounded-full pointer-events-none"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-blue-500/10 rounded-full pointer-events-none"></div>
-          <VideoPreview />
-          
-        </div>
+        <div id="blog" className="relative w-full lg:w-1/2 h-[600px] flex items-center justify-center mt-16 lg:mt-0 lg:pr-8">
+          {/* Background Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+          {/* The Wrapper */}
+          {/* Added lg:ml-8 to ensure there is always a gap between the text and this card */}
+          <div className="relative z-10 w-full lg:max-w-xl lg:ml-8">
+            <VideoPreview className="w-full" />
+          </div>  
+      </div>
       </div>
 
       {/* ================= BOTTOM: TECH STACK RIBBON ================= */}
-      <div className="w-full border-y border-slate-800 bg-[#0f172a]/80 backdrop-blur-sm mt-16 py-6">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between flex-wrap gap-6">
-          {techs.map((tech, index) => (
-            <div key={index} className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="text-3xl md:text-4xl group-hover:-translate-y-1 transition-transform duration-300 drop-shadow-md">
-                {tech.icon}
-              </div>
-              <span className="text-xs text-gray-400 font-medium group-hover:text-white transition-colors">
-                {tech.name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Achievements />
+
     </section>
   );
 }
